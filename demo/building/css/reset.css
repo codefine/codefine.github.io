@@ -1,0 +1,87 @@
+/* 清除默认样式 */
+body,
+p,
+ul,
+input,
+button,
+h1{
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body{
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+body{
+	font-family: "微软雅黑", "黑体", Helvetica, Verdana, sans-serif;
+}
+
+img{
+	border: none;
+	vertical-align: middle;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+ul{
+	list-style: none;
+}
+
+input,
+button{
+	display: block;
+	border: none;
+	background: none;
+	outline: none;
+	appearance: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+input:focus,
+button:focus{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+strong{
+	display: block;
+	font-weight: normal;
+}
+
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+	visibility: visible;
+}
+.hide{
+	visibility: hidden;
+}
+
+.layui-m-layercont{
+	color: #000 !important;
+	font-size: 14px !important;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="x5-page-mode" content="app">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta name="layoutmode" content="standard">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>3D</title>
+    <link rel="stylesheet" href="css/style.css?v=1.0"> 
+    <script type="text/javascript" src="js/vconsole.min.js"></script>
+    <script> 
+      function getUrlParms(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)
+          return unescape(r[2]);
+        return null;
+      }
+      if (getUrlParms("debug"))
+        var Vconsole = new VConsole();
+    </script>
+</head>
+<body>
+<img class="back_ground" src="images/background.jpg">
+<canvas id="renderCanvas"></canvas>  
+<div id="loadingContainer" class="loading">
+    <div class="cssload-spinner"></div>
+    <p>加载中
+        <span class="loading-count">0</span>%
+        <span class="dotting"></span>
+    </p>
+</div> 
+
+<div style="position: absolute;z-index:100;left:50px;top:50px;">
+    <a href="javascript:void(0)" onclick="loader.showNormal()">外观</a>
+  <a href="javascript:void(0)" onclick="loader.showNY()">能源</a>
+  <a href="javascript:void(0)" onclick="loader.showDT()">电梯</a>
+  <a href="javascript:void(0)" onclick="loader.showPark()">停车</a>
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/engin.js"></script>
+<script src="js/babylon.wxfix.js"></script>  
+<script src="js/src/EventDispatcher.js"></script> 
+<script src="js/loader.js?v=1.0"></script> 
+
+<script> 
+  var loader = new Loader();
+  loader.initScene()
+
+</script>
+
+
+</body>
+</html>
